@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote Request Form</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+  <script src="script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+  <h1>CBP Quote/Order Request Form</h1>
+  <div class="search-container">
+    <label for="search-input">Search:</label>
+    <input type="text" class="search-input" id="search-input" placeholder="Search description">
+
+    <label for="search-results-dropdown">Results:</label>
+    <select name="search-results" class="search-results-dropdown" id="search-results-dropdown">
+      <option value="">Select Item</option>
+    </select>
+  </div>
+
+  <table class="order-table">
+    <thead>
+      <tr>
+        <th>Part Number</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Need by Date</th>
+        <th>Notes</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <button class="add-row">Add Row</button>
+  <div class="grand-total-container">
+    <span>Grand Total: </span>
+    <span class="grand-total">0.00</span>
+  </div>
+  <div>
+    <label for="order-notes">Order Notes:</label>
+    <textarea id="order-notes" name="order-notes" rows="4" cols="50"></textarea>
+  </div>
+  <button class="submit-order">Submit Order</button>
+</body>
+</html>
